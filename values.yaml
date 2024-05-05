@@ -1,0 +1,13 @@
+mainIpPoolAddresses: 192.168.1.230-192.168.1.239
+
+metallb:
+  global:
+    imageRegistry: nexus-docker.homelab.mohamedsaidsallam.work
+
+    imagePullSecrets:
+      - name: nexus-cred
+
+  controller:
+    resourcesPreset: "nano"
+  speaker:
+    resourcesPreset: "nano"
